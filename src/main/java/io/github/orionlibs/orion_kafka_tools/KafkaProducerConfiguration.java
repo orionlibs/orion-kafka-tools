@@ -62,7 +62,7 @@ public class KafkaProducerConfiguration
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
-        configProps.put(JsonSerializer.TYPE_MAPPINGS, "greeting:com.baeldung.spring.kafka.Greeting, farewell:com.baeldung.spring.kafka.Farewell");
+        configProps.put(JsonSerializer.TYPE_MAPPINGS, "greeting:io.github.orionlibs.orion_kafka_tools.Greeting, farewell:io.github.orionlibs.orion_kafka_tools.Farewell");
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 
